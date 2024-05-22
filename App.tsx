@@ -1,8 +1,9 @@
 import React from 'react';
-import Routes from './src/routes/Routes';
+import TabNavigation from './src/routes/TabNavigation';
+
 
 function App() {
-  return <Routes />;
+  return <TabNavigation />;
 }
 
 export default App;

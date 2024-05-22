@@ -31,7 +31,7 @@ function Home() {
     <View>
       <Navbar />
       
-      <View style={{height: screenHeight*.83}}>
+      <View style={{height: screenHeight}}>
      
         <ScrollView style={styles.outer}>
          <View style={styles.line} />
@@ -316,7 +316,7 @@ function Home() {
           </View>
         </ScrollView>
       </View>
-      <Footer />
+      {/* <Footer /> */}
     </View>
   );
 }

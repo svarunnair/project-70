@@ -39,6 +39,27 @@ const movieList = [
     rate: '8.8',
     vote: '10.3K',
   },
+  {
+    name: 'Leo',
+    image:
+      'https://m.media-amazon.com/images/M/MV5BMmFiOGYyZjQtZmZmNC00ZTgzLWI5ZjktMTRiYzc5NjAzODRkXkEyXkFqcGdeQXVyMTYyNDkzNzgz._V1_.jpg',
+    rate: '8.8',
+    vote: '10.3K',
+  },
+  {
+    name: 'Interstellar',
+    image:
+      'https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
+    rate: '8.8',
+    vote: '10.3K',
+  },
+  {
+    name: 'Nine',
+    image:
+      'https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/9-malayalam-et00072985-23-03-2018-06-08-38.jpg',
+    rate: '8.8',
+    vote: '10.3K',
+  },
 ];
 
 function Movies() {
