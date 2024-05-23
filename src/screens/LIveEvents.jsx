@@ -2,6 +2,8 @@ import { Icon} from '@rneui/base'
 import React from 'react'
 import { FlatList, Image, TouchableOpacity } from 'react-native'
 import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native'
+import Slider from '../components/Slider';
+import Booking from '../components/Booking';
 
 const movieList = [
   {
@@ -99,6 +101,7 @@ function LiveEvents() {
         <View style={{height:screenHeight*.09}}>
         <ScrollView style={{}} horizontal showsHorizontalScrollIndicator={false}>
        <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>English</Text></View>
+            
              <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Malayalam</Text></View>
              <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Tamil</Text></View>
              <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Kannada</Text></View>
@@ -116,6 +119,8 @@ function LiveEvents() {
       
         </View>
         <View >
+
+        <Booking/>
 
 <FlatList
       data={movies}

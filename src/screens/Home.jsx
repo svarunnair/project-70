@@ -28,7 +28,7 @@ import ScrollData from '../components/ScrollData';
 
 function Home() {
   return (
-    <View>
+    <View >
       <Navbar />
       
       <View style={{height: screenHeight}}>
@@ -347,7 +347,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  outer: {},
+  outer: {
+    marginBottom:screenHeight*.15,
+  },
   ind: {
     paddingBottom: 15,
     paddingLeft: 10,

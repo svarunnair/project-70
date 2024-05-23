@@ -79,84 +79,92 @@ function Profile() {
         <View style={style.navbar}>
         <View >
             <Text style={{fontSize:22, fontWeight:"600",color:"black"}}>Profile page</Text>
-             <Text style={{color:"grey"}}>Account.................!</Text>
+             <Text style={{color:"grey"}}>Account</Text>
         </View>
 
         <View style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-            <Icon type='ionicon' name='search-outline'></Icon>
+            <Icon type='ionicon' name='person-circle-outline'></Icon>
         </View>
 
         </View>
         {/* language */}
+        <ScrollView >
+        <View style={{display:"flex",flexDirection:"column",gap:20,backgroundColor:"#F5F5F5"}}>
         
 
-        {/* movielist */}
-        <ScrollView>
-        <View style={{height:screenHeight*.09}}>
-        <ScrollView style={{}} horizontal showsHorizontalScrollIndicator={false}>
-       <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>English</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Malayalam</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Tamil</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Kannada</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Telugu</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Hindi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Punjabi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Marathi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Korean</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Japanese</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Multi Language</Text></View>
-       
-        </ScrollView>
-
-        {/* content */}
+        <View style={{padding:screenWidth*.03,backgroundColor: 'rgba(26, 666, 26, 0.1)',}}> 
+        <Text style={{color:"grey"}}>8 booking away from being a SUPERSTAR</Text>
+        <View style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+          <Text style={{color:"grey"}}>Rewards and benefits await. Know more</Text>
+          <Text style={{color:"grey"}}>></Text>
+          <View>
       
+</View>
+
+          </View>
+        
         </View>
-        <View >
+        
+        <View style={{display:"flex",flexDirection:"column",backgroundColor:"white"}}>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Your order</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Stram Library</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Play Credit Card</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Help Center</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Account & Setting</Text>
+            </View>
+            </View>
 
-<FlatList
-      data={movies}
-      renderItem={renderItem}
-      keyExtractor={(item, index) => index.toString()}
-      numColumns={2}
-      columnWrapperStyle={style.row}
-      contentContainerStyle={style.container}
-    />
+            <View style={{display:"flex",flexDirection:"column",backgroundColor:"white"}}>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Your order</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Stram Library</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Play Credit Card</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Help Center</Text>
+            </View>
+            <View style={{padding:20,borderWidth:.2}}>
+                <Text style={{color:"grey"}}>Account & Setting</Text>
+            </View>
+            </View>
+            </View>
 
-    {/* section */}
-     {/* language */}
-        <View style={{height:screenHeight*.09}}>
-        <ScrollView style={{}} horizontal showsHorizontalScrollIndicator={false}>
-       <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>English</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Malayalam</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Tamil</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Kannada</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Telugu</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Hindi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Punjabi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Marathi</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Korean</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Japanese</Text></View>
-             <View style={{padding:10}}><Text style={{borderWidth:.4,padding:10,borderRadius:20,color:"red"}}>Multi Language</Text></View>
-       
-        </ScrollView>
+            <View style={{display:"flex",flexDirection:"column",}}>
 
-        {/* content */}
-      
-        </View>
+    <View style={{padding:screenWidth*.1,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+      <Text style={style.text}>Share</Text>
+      <Text style={style.text}>|</Text>
+      <Text style={style.text}>Rate Us</Text>
+       <Text style={style.text}>|</Text>
+      <Text style={style.text}>bookasmile</Text>
+      </View>
 
-        <FlatList
-      data={movie2}
-      renderItem={renderItem}
-      keyExtractor={(item, index) => index.toString()}
-      numColumns={2}
-      columnWrapperStyle={style.row}
-      contentContainerStyle={style.container}
-    />
+<View style={{display:"flex",flexDirection:"row",justifyContent:"center",alignItems:"center"}}>
+
+      <Text style={style.app}>App Version 15.4.0</Text>
+
+</View>
     
-
-
-        </View>
+      
+    </View>
+    
         </ScrollView>
+
+
+       
     </View>
   )
 }
@@ -172,6 +180,14 @@ const style=StyleSheet.create({
         borderWidth:.4,
         padding:10,
         width:screenWidth
+    },
+    app:{
+    marginBottom:screenHeight*.2,
+    color:"grey"
+    },
+    text:{
+      color:"grey",
+      fontSize:14,
     },
     btn:{
         display:"flex",

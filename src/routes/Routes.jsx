@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import About from '../screens/About';
 
+
 const Stack = createNativeStackNavigator();
 
 function Routes() {
@@ -12,7 +13,7 @@ function Routes() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerShown: false, // Corrected syntax
+          headerShown: false, 
         }}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="About" component={About} />
