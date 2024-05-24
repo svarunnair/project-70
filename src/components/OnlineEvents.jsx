@@ -1,5 +1,6 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {Dimensions, Text} from 'react-native';
+import {Dimensions, Text, TouchableOpacity} from 'react-native';
 import {Image, ScrollView, StyleSheet, View} from 'react-native';
 
 const movieList = [
@@ -40,6 +41,11 @@ const movieList = [
 ];
 
 function OnlineEvents() {
+  const navigation=useNavigation()
+
+  const handleImg=(item)=>{
+    navigation.navigate("About",item)
+  }
   return (
     <View>
       <ScrollView
@@ -48,7 +54,9 @@ function OnlineEvents() {
         contentContainerStyle={styles.scrollContainer}>
         {movieList.map(item => (
           <View style={styles.wrap}>
+          <TouchableOpacity onPress={()=>handleImg(item)}>
             <Image style={styles.img} source={{uri: item.image}} />
+          </TouchableOpacity>
             <View style={styles.rate}>
               <Text style={{color: 'grey'}}>{item.date}</Text>
             </View>

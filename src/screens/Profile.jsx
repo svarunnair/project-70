@@ -106,38 +106,48 @@ function Profile() {
         </View>
         
         <View style={{display:"flex",flexDirection:"column",backgroundColor:"white"}}>
-            <View style={{padding:20,borderWidth:.2}}>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                 <Text style={{color:"grey"}}>Your order</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Stram Library</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>Stream Library</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                 <Text style={{color:"grey"}}>Play Credit Card</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                 <Text style={{color:"grey"}}>Help Center</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
                 <Text style={{color:"grey"}}>Account & Setting</Text>
+                <Text>></Text>
             </View>
             </View>
 
             <View style={{display:"flex",flexDirection:"column",backgroundColor:"white"}}>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Your order</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>Rewards</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Stram Library</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>Offers</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Play Credit Card</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>Gift Cards</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Help Center</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>Food & Beverages</Text>
+                <Text>></Text>
             </View>
-            <View style={{padding:20,borderWidth:.2}}>
-                <Text style={{color:"grey"}}>Account & Setting</Text>
+            <View style={{padding:20,borderWidth:.2,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                <Text style={{color:"grey"}}>List your Show</Text>
+                <Text>></Text>
             </View>
             </View>
             </View>
@@ -182,7 +192,7 @@ const style=StyleSheet.create({
         width:screenWidth
     },
     app:{
-    marginBottom:screenHeight*.2,
+    marginBottom:screenHeight*.15,
     color:"grey"
     },
     text:{

@@ -74,7 +74,7 @@ function MoviePage() {
     </View>
   );
   return (
-    <View style={{}}>
+    <View style={{marginBottom:screenHeight*.1}}>
         {/* navbar */}
         <View style={style.navbar}>
         <View >
