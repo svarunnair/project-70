@@ -43,7 +43,7 @@ const movieList=[
 function Popular() {
     const navigation=useNavigation()
     const handleImg=(item)=>{
-        navigation.navigate("About",item)
+    navigation.navigate("About",item)
     }
   return (
     <View>

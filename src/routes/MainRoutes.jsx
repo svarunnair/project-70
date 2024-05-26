@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,6 +9,7 @@ import About from '../screens/About';
 import MoviePage from '../screens/MoviePage';
 import LiveEvents from '../screens/LIveEvents';
 import Profile from '../screens/Profile';
+import { Dimensions } from 'react-native';
 
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +49,7 @@ function ProfileStack() {
 }
 
 function TabNavigation() {
+  const screenHeight=Dimensions.get("window").height
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -54,10 +57,12 @@ function TabNavigation() {
           headerShown: false,
           tabBarActiveTintColor: 'red',
           tabBarInactiveTintColor: 'grey',
-          tabBarLabelStyle: { fontSize: 15 },
+          tabBarLabelStyle: { fontSize: 17,marginBottom:screenHeight*.01 },
           tabBarStyle: {
             backgroundColor: '#fff',
-            padding: 5,
+            padding:0,
+            height:screenHeight*.08,
+            
           },
           tabBarIcon: ({ color, size }) => {
             let iconName;

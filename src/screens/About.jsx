@@ -108,35 +108,36 @@ const crewData = [
   },
 ];
 
-function About({route}) {
+function About({ route }) {
   const id = route.params;
-  console.log('para....', id);
+  console.log('route.params..........', route.name);
   const navigation = useNavigation();
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       {/* nav */}
       <View style={style.navBar}>
         <TouchableOpacity onPress={() => navigation.navigate('Home')}>
           <Icon type="ionicon" name="chevron-back-outline" />
         </TouchableOpacity>
 
-        <Text style={{color: 'black'}}>{id.name}</Text>
+        <Text style={{ color: 'black' }}>{id.name}</Text>
         <Icon type="ionicon" name="share-social-outline" />
       </View>
 
       {/* content */}
-      <ScrollView style={{height: screenHeight - 115}}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
         <TouchableOpacity
           style={{
             display: 'flex',
             padding: 10,
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+        >
           <Image
-            style={{width: '95%', height: screenWidth * 0.4, borderRadius: 15}}
-            source={{uri: id.image}}
+            style={{ width: '95%', height: screenWidth * 0.4, borderRadius: 15 }}
+            source={{ uri: id.image }}
           />
         </TouchableOpacity>
 
@@ -146,7 +147,8 @@ function About({route}) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+        >
           <View
             style={{
               flexDirection: 'row',
@@ -155,14 +157,15 @@ function About({route}) {
               padding: 10,
               borderRadius: 10,
               width: '95%',
-            }}>
-            <View style={{flexDirection: 'row'}}>
-              <Text style={{fontSize: 13, fontWeight: '500', color: 'black'}}>
+            }}
+          >
+            <View style={{ flexDirection: 'row' }}>
+              <Text style={{ fontSize: 13, fontWeight: '500', color: 'black' }}>
                 50.05k
               </Text>
-              <Text style={{fontSize: 10, width: '60%', color: 'black'}}>
+              <Text style={{ fontSize: 10, width: '60%', color: 'black' }}>
                 {' '}
-                are intrested are you interested in watching this movie
+                are interested, are you interested in watching this movie?
               </Text>
             </View>
 
@@ -175,8 +178,9 @@ function About({route}) {
                 padding: 5,
                 borderRadius: 10,
                 textAlign: 'center',
-              }}>
-              <Text style={{color: 'red', fontSize: 10}}>I'm interested</Text>
+              }}
+            >
+              <Text style={{ color: 'red', fontSize: 10 }}>I'm interested</Text>
             </View>
           </View>
         </View>
@@ -184,11 +188,12 @@ function About({route}) {
         <View
           style={{
             flexDirection: 'row',
-            justifyContent: 'left',
+            justifyContent: 'flex-start',
             gap: 8,
             paddingHorizontal: 20,
             paddingVertical: 5,
-          }}>
+          }}
+        >
           <Text
             style={{
               color: 'black',
@@ -197,7 +202,8 @@ function About({route}) {
               backgroundColor: '#D6EAF8',
               borderRadius: 5,
               fontSize: 10,
-            }}>
+            }}
+          >
             2D, 2D SCREEN X, MX4D, 4DX, IMAX 2D, ICE
           </Text>
           <Text
@@ -207,16 +213,15 @@ function About({route}) {
               backgroundColor: '#D6EAF8',
               borderRadius: 5,
               padding: 3,
-            }}>
+            }}
+          >
             Tamil, English, +2
           </Text>
         </View>
         {/* time */}
-        <View style={{paddingHorizontal: 20}}>
-          <Text style={{color: 'grey'}}>
-            2h 28m . Action, Sci-Fi, Triller.A
-          </Text>
-          <Text style={{color: 'grey'}}>
+        <View style={{ paddingHorizontal: 20 }}>
+          <Text style={{ color: 'grey' }}>2h 28m . Action, Sci-Fi, Thriller</Text>
+          <Text style={{ color: 'grey' }}>
             Snatched from the Green Place of Many Mothers, young Furiosa falls
             into the hands of a great biker horde led by the warlord Dementus.
             Sweeping through the Wasteland, they come across the Citadel,
@@ -228,26 +233,33 @@ function About({route}) {
 
         {/* top section */}
         <View style={style.top}>
-          <Text style={{fontSize: 15, color: 'black',paddingHorizontal:17,paddingVertical:15}}>
+          <Text
+            style={{
+              fontSize: 15,
+              color: 'black',
+              paddingHorizontal: 17,
+              paddingVertical: 15,
+            }}
+          >
             Top offers for you
           </Text>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={style.div}>
-            {topData.map(item => (
+            contentContainerStyle={style.div}
+          >
+            {topData.map((item, index) => (
               <View
+                key={index}
                 style={{
                   flexDirection: 'row',
                   padding: 10,
                   borderRadius: 10,
                   backgroundColor: '#FCF3CF',
                   gap: 10,
-                }}>
-                <Image
-                  style={{width: 30, height: 30}}
-                  source={{uri: item.image}}
-                />
+                }}
+              >
+                <Image style={{ width: 30, height: 30 }} source={{ uri: item.image }} />
                 <Text
                   style={{
                     padding: 7,
@@ -255,7 +267,8 @@ function About({route}) {
                     color: 'grey',
                     borderRadius: 5,
                     backgroundColor: 'white',
-                  }}>
+                  }}
+                >
                   {item.name}
                 </Text>
               </View>
@@ -265,26 +278,29 @@ function About({route}) {
         <View style={style.line} />
 
         {/* cast section */}
-        <View style={{padding: 10}}>
-          <Text style={{fontSize: 18, color: 'black'}}>Cast</Text>
+        <View style={{ padding: 10 }}>
+          <Text style={{ fontSize: 18, color: 'black' }}>Cast</Text>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={style.wrap}>
-            {castData.map(item => (
+            contentContainerStyle={style.wrap}
+          >
+            {castData.map((item, index) => (
               <View
+                key={index}
                 style={{
                   flexDirection: 'column',
                   gap: 8,
                   justifyContent: 'center',
                   alignItems: 'center',
-                }}>
+                }}
+              >
                 <Image
-                  style={{width: 100, height: 100, borderRadius: 100}}
-                  source={{uri: item.image}}
+                  style={{ width: 100, height: 100, borderRadius: 100 }}
+                  source={{ uri: item.image }}
                 />
-                <Text style={{color: 'black'}}>{item.name}</Text>
-                <Text style={{color: 'grey'}}>as {item.role}</Text>
+                <Text style={{ color: 'black' }}>{item.name}</Text>
+                <Text style={{ color: 'grey' }}>as {item.role}</Text>
               </View>
             ))}
           </ScrollView>
@@ -292,45 +308,46 @@ function About({route}) {
 
         <View style={style.line} />
 
-        {/* cast section */}
-        <View style={{padding: 10}}>
-          <Text style={{fontSize: 18, color: 'black'}}>Crew</Text>
+        {/* crew section */}
+        <View style={{ padding: 10 }}>
+          <Text style={{ fontSize: 18, color: 'black' }}>Crew</Text>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={style.wrap}>
-            {crewData.map(item => (
+            contentContainerStyle={style.wrap}
+          >
+            {crewData.map((item, index) => (
               <View
+                key={index}
                 style={{
                   flexDirection: 'column',
                   gap: 8,
                   justifyContent: 'center',
                   alignItems: 'center',
-                }}>
+                }}
+              >
                 <Image
-                  style={{width: 100, height: 100, borderRadius: 100}}
-                  source={{uri: item.image}}
+                  style={{ width: 100, height: 100, borderRadius: 100 }}
+                  source={{ uri: item.image }}
                 />
-                <Text style={{color: 'black'}}>{item.name}</Text>
-                <Text style={{color: 'grey'}}>as {item.role}</Text>
+                <Text style={{ color: 'black' }}>{item.name}</Text>
+                <Text style={{ color: 'grey' }}>as {item.role}</Text>
               </View>
             ))}
           </ScrollView>
         </View>
         <View style={style.line} />
 
-        {/* sugetion section */}
-
+        {/* suggestion section */}
         <View>
           <View
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
               padding: 10,
-            }}>
-            <Text style={{fontSize: 15, color: 'black'}}>
-              You might also like
-            </Text>
+            }}
+          >
+            <Text style={{ fontSize: 15, color: 'black' }}>You might also like</Text>
             <Icon type="ionicon" name="chevron-forward-outline" />
           </View>
 
@@ -339,11 +356,10 @@ function About({route}) {
       </ScrollView>
 
       {/* footer */}
-
       <View style={style.footer}>
         <TouchableOpacity>
           <View style={style.btn}>
-            <Text style={{color: 'white', fontWeight: '700', fontSize: 15}}>
+            <Text style={{ color: 'white', fontWeight: '700', fontSize: 15 }}>
               Book tickets
             </Text>
           </View>
@@ -352,6 +368,7 @@ function About({route}) {
     </View>
   );
 }
+
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 const style = StyleSheet.create({
@@ -363,7 +380,7 @@ const style = StyleSheet.create({
   },
   btn: {
     width: screenWidth * 0.9,
-    height: screenHeight * 0.04,
+    height: screenHeight * 0.06,
     borderRadius: 10,
     display: 'flex',
     justifyContent: 'center',
@@ -382,9 +399,12 @@ const style = StyleSheet.create({
   footer: {
     width: '100%',
     padding: 10,
+    position: 'absolute',
+    bottom: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'white',
   },
   top: {},
   wrap: {
@@ -392,4 +412,5 @@ const style = StyleSheet.create({
     gap: 10,
   },
 });
+
 export default About;
