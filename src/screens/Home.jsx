@@ -25,8 +25,11 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import {Icon} from '@rneui/base';
 import ScrollData from '../components/ScrollData';
+import { useRoute } from '@react-navigation/native';
 
 function Home() {
+  const route=useRoute()
+  console.log("RouteHome.....",route.name)
   return (
     <View >
       <Navbar />

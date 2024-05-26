@@ -110,7 +110,7 @@ const crewData = [
 
 function About({ route }) {
   const id = route.params;
-  console.log('route.params..........', route.name);
+  console.log("routeName.......",route.name)
   const navigation = useNavigation();
 
   return (
