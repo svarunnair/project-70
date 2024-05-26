@@ -50,49 +50,36 @@ function TabNavigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={{
-            headerShown: false,
+        screenOptions={({ route }) => ({
+          headerShown: false,
           tabBarActiveTintColor: 'red',
           tabBarInactiveTintColor: 'grey',
-          tabBarLabelStyle: { fontSize: 14 }
-        }}
+          tabBarLabelStyle: { fontSize: 15 },
+          tabBarStyle: {
+            backgroundColor: '#fff',
+            padding: 5,
+          },
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+
+            if (route.name === 'Home') {
+              iconName = 'home';
+            } else if (route.name === 'Movies') {
+              iconName = 'videocam';
+            } else if (route.name === 'LiveEvents') {
+              iconName = 'cash';
+            } else if (route.name === 'Profile') {
+              iconName = 'person';
+            }
+
+            return <Icon type='ionicon' name={iconName} color={color} size={size} />;
+          },
+        })}
       >
-        <Tab.Screen 
-          name="Home" 
-          component={HomeStack} 
-          options={{ 
-            tabBarIcon: ({ color, size }) => (
-              <Icon type='ionicon' name='home-outline' color={color} size={size} />
-            ),
-          }} 
-        />
-        <Tab.Screen 
-          name="Movies" 
-          component={MovieStack} 
-          options={{ 
-            tabBarIcon: ({ color, size }) => (
-              <Icon type='ionicon' name='planet-outline' color={color} size={size} />
-            ),
-          }} 
-        />
-        <Tab.Screen 
-          name="LiveEvents" 
-          component={LiveEventsStack} 
-          options={{ 
-            tabBarIcon: ({ color, size }) => (
-              <Icon type='ionicon' name='link-outline' color={color} size={size} />
-            ),
-          }} 
-        />
-        <Tab.Screen 
-          name="Profile" 
-          component={ProfileStack} 
-          options={{ 
-            tabBarIcon: ({ color, size }) => (
-              <Icon type='ionicon' name='person-outline' color={color} size={size} />
-            ),
-          }} 
-        />
+        <Tab.Screen name="Home" component={HomeStack} />
+        <Tab.Screen name="Movies" component={MovieStack} />
+        <Tab.Screen name="LiveEvents" component={LiveEventsStack} />
+        <Tab.Screen name="Profile" component={ProfileStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
