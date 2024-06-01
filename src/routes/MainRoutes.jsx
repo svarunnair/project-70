@@ -19,7 +19,7 @@ function HomeStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="About" component={About} />
+   
     </Stack.Navigator>
   );
 }
@@ -51,7 +51,7 @@ function ProfileStack() {
 function TabNavigation() {
   const screenHeight=Dimensions.get("window").height
   return (
-    <NavigationContainer>
+    
       <Tab.Navigator
         screenOptions={({ route }) => ({
           headerShown: false,
@@ -86,7 +86,7 @@ function TabNavigation() {
         <Tab.Screen name="LiveEvents" component={LiveEventsStack} />
         <Tab.Screen name="Profile" component={ProfileStack} />
       </Tab.Navigator>
-    </NavigationContainer>
+  
   );
 }
 

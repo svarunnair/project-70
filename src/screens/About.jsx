@@ -380,7 +380,7 @@ const style = StyleSheet.create({
   },
   btn: {
     width: screenWidth * 0.9,
-    height: screenHeight * 0.06,
+    height: screenHeight * 0.05,
     borderRadius: 10,
     display: 'flex',
     justifyContent: 'center',
